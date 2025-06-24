@@ -33,21 +33,23 @@ export default function AboutPage() {
     transform: scrolled ? 'translateY(0)' : 'translateY(2px)'
   }}
 >
-          <header className="flex justify-center items-center text-white text-[16.92px] max-w-7xl mx-auto">
-            <nav className="flex space-x-6 items-center">
-              <Link href="/">Home</Link>
-              <span className="h-4 border-l border-white" />
-               <Link href="/property">Properties</Link>
-            <span className="h-4 border-l border-white" />
-              <Link href="/about">About Us</Link>
-              <span className="h-4 border-l border-white" />
-              <Link href="/buyers">For Buyers</Link>
-              <span className="h-4 border-l border-white" />
-              <Link href="/partners">▸ Partners</Link>
-              <span className="h-4 border-l border-white" />
-              <Link href="/contact">Contact Us</Link>
-            </nav>
-          </header>
+          <header className="flex justify-between items-center text-white text-[16.92px] max-w-7xl mx-auto">
+                        <Image src="/images/mhr- logo.svg" alt="Logo" width={60} height={80} />
+                        <nav className="flex space-x-6 items-center">
+                            <Link href="/">Home</Link>
+                            <span className="h-4 border-l border-white" />
+                            <Link href="/property">Properties</Link>
+                             <span className="h-4 border-l border-white" />
+                            <Link href="/about">About Us</Link>
+                           <span className="h-4 border-l border-white" />
+                            <Link href="/buyers">For Buyers</Link>
+                            <span className="h-4 border-l border-white" />
+                            <Link href="/partners">▸ Partners</Link>
+                            <span className="h-4 border-l border-white" />
+                            <Link href="/contact">Contact Us</Link>
+                        </nav>
+                        <img src="/images/quote.svg" alt="Quote" className="h-[40px] w-[35px] ml-6" />
+                    </header>
         </div>
 
         {/* Dark Overlay for text readability */}
