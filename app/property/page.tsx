@@ -1,19 +1,12 @@
 "use client"
 
-import Image from "next/image"
-import { useEffect, useState } from "react"
-import Link from "next/link"
 import Footer from "@/components/Footer"
 import { useRouter } from 'next/navigation';
 import Header from "@/components/Header"
 
 
 export default function Hero() {
-  
   const router = useRouter();
-
-  
-
   return (
     <>
       {/* Hero Section */}

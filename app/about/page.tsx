@@ -1,14 +1,10 @@
 "use client"
-
-
 import Image from "next/image"
 import Link from "next/link"
 import Footer from "@/components/Footer"
-
 import Header from "@/components/Header"
 
 export default function AboutPage() {
-  
   return (
     <div className="font-poppins bg-white text-black">
       {/* Hero Section */}
@@ -23,7 +19,6 @@ export default function AboutPage() {
         sizes="100vw"
         className="object-cover object-center "
       />
-
       {/* Header */}
       <Header />
 
@@ -34,27 +29,22 @@ export default function AboutPage() {
         </h1>
       </div>
     </section>
-
       {/* About Content */}
     <section className="relative bg-slate-900 text-white min-h-[1880px] w-full overflow-visible">
-  {/* Background Image */}
-  <div className="absolute inset-0 z-0">
-    <Image
-      src="/images/about/about-us.png"
-      alt="About us background"
-      fill
-      className="object-cover"
-      priority
-    />
-    {/* Black Overlay */}
-        <div className="absolute inset-0 bg-black/40 z-10 opacity-60" />
-      </div>
-
-      {/* Top & Bottom Outward Shadows */}
-   
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/about/about-us.png"
+          alt="About us background"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Black Overlay */}
+            <div className="absolute inset-0 bg-black/40 z-10 opacity-60" />
+          </div>
       <div className="pointer-events-none absolute top-[-100px] left-0 w-full h-[100px] z-20 bg-gradient-to-t from-black/90 to-transparent" />
     <div className="absolute -bottom-[40px] left-0 w-full h-[40px] bg-gradient-to-b from-black/60 via-white/10 to-transparent" />
-
         <div className="relative z-10">
           <div className="text-center pt-12 pb-8">
             <div className="flex items-center justify-center w-full">
@@ -72,7 +62,6 @@ export default function AboutPage() {
                 <p className="text-base md:text-[36px] font-normal text-white">Guiding Your Home</p>
               </div>
 
-
               {/* Right gradient line */}
               <div
                 className="flex-1 h-[3px]"
@@ -82,13 +71,10 @@ export default function AboutPage() {
               />
             </div>
           </div>
-
           {/* Content */}
          <div className="pt-12 pb-20 px-2 md:px-14 lg:px-24">
-
       {/* Wrapper for sections */}
-      <div className="space-y-28 w-full">
-    
+    <div className="space-y-28 w-full">
     {/* Our Company - Left aligned */}
     <div className="flex justify-start mb-20">
       <div className="space-y-4 w-[480px] h-[287px]">
@@ -104,7 +90,6 @@ export default function AboutPage() {
         </p>
       </div>
     </div>
-
     {/* Our Team - Right aligned */}
     <div className="flex justify-end mb-20">
       <div className="space-y-4 w-[480px] h-[287px]">
@@ -120,7 +105,6 @@ export default function AboutPage() {
         </p>
       </div>
     </div>
-
     {/* Our Approach - Left aligned */}
     <div className="flex justify-start mb-20">
       <div className="space-y-4 w-[480px] h-[287px]">
@@ -136,7 +120,6 @@ export default function AboutPage() {
         </p>
       </div>
     </div>
-
     {/* Our Commitments - Right aligned */}
     <div className="flex justify-end mb-20">
       <div className="space-y-4 w-[480px] h-[287px]">
@@ -152,14 +135,10 @@ export default function AboutPage() {
         </p>
         </div>
       </div>
-
     </div>
   </div>
-
   </div>
   </section>
-
-     
       {/* Contact Call-to-Action Section */}
       <section className="relative h-[300px] flex items-center justify-center mt-20 px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-40">
         <div className="relative w-full max-w-6xl h-full overflow-hidden rounded-lg shadow-xl">
@@ -171,10 +150,6 @@ export default function AboutPage() {
             className="object-cover object-center z-0"
             priority
           />
-
-          {/* Overlay */}
-          
-
           {/* Content Container */}
            <div className="relative z-20 text-white text-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 max-w-[1200px] mx-auto pt-20">
             <h2 className="text-[28px] md:text-[32px] lg:text-[36px] font-semibold leading-tight mb-6">
@@ -192,7 +167,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Explore Projects Section */}
       <section className="bg-white py-20 px-4 md:px-8 lg:px-12">
         <div className="max-w-[1200px] mx-auto text-center px-4 md:px-6 lg:px-8">
@@ -204,8 +178,6 @@ export default function AboutPage() {
           pharetra eu velit. Nam ullamcorper ligula ligula, a mattis libero luctus a. Nunc quam libero, finibus sit
           amet molestie quis, tempor congue quam.
         </p>
-
-
         <div className="bg-white py-16 px-8 md:px-16 rounded-xl shadow-md w-full max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center">
             <img src="/images/about/1.png" alt="..." className="w-[245px] h-[245px] object-cover rounded-xl" />
@@ -216,9 +188,7 @@ export default function AboutPage() {
         </div>
         </div>
       </section>
-
       <Footer/>
-
     </div>
   )
 }

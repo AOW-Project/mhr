@@ -6,10 +6,7 @@ import Link from "next/link"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 
-
 export default function AboutPage() {
- 
-
   return (
     <div className="font-poppins bg-white text-black">
       {/* Hero Section */}
@@ -26,10 +23,6 @@ export default function AboutPage() {
           sizes="100vw"
           className="object-cover object-center "
         />
-
-        {/* Optional dark overlay for readability */}
-
-
         {/* Header */}
         <Header />
 
@@ -39,10 +32,7 @@ export default function AboutPage() {
           <h1 className="text-white text-[48px] md:text-6xl font-semibold">Our Partners</h1>
         </div>
       </section>
-
-
     {/*partners*/}
-
       <section className="w-full h-[170px] bg-cover bg-center relative " >
         <div className="absolute inset-0 bg-black" />
         <div className="relative z-10 flex justify-around items-center h-full px-4 md:px-0 max-w-7xl mx-auto">
@@ -88,8 +78,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-
       {/* Partner Cards Section */}
     <section className="bg-black py-10 px-28 pb-20">
   <div className="max-w-9xl mx-auto">
@@ -131,13 +119,11 @@ export default function AboutPage() {
                 View Details
             </button>
             </div>
-
         </div>
       ))}
     </div>
   </div>
 </section>
-
       <Footer />
     </div>
   )

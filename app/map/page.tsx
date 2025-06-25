@@ -1,26 +1,18 @@
 "use client"
-
 import Image from "next/image"
-import Link from "next/link"
-
 import { useRouter } from "next/navigation"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 
 export default function LuxuryPropertiesPage() {
-  
-
   return (
     <div className="bg-black text-white min-h-screen ">
       {/* HEADER */}
       <div
         className="fixed top-0 left-0 w-screen z-50 px-6 md:px-20 py-8 transition-colors duration-500"
-        
-      >
-       
+         > 
       </div>
       <Header/>
-
       {/* TOP IMAGE */}
       <div className="pt-32">
         <Image
@@ -51,9 +43,6 @@ export default function LuxuryPropertiesPage() {
             </select>
         </div>
         </div>
-
-
-
       {/* LUXURY PROPERTIES SECTION */}
    <div className="flex max-w-7xl mx-auto mt-10 gap-6 px-4 mb-10">
   {/* MAP CARD LEFT */}
@@ -79,9 +68,6 @@ export default function LuxuryPropertiesPage() {
       </div>
     </div>
   </div>
-
-
-
         {/* PROPERTY CARDS */}
 <div className="grid grid-cols-2 gap-6 ml-4"> {/* Added ml-6 here */}
   {Array(4).fill(0).map((_, idx) => (

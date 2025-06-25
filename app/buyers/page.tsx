@@ -1,14 +1,8 @@
 "use client"
 import Image from "next/image"
-import Link from "next/link"
 import Footer from "@/components/Footer"
-
 import Header from "@/components/Header"
-
 export default function AboutPage() {
-   
-  
-
   return (
     <div className="font-poppins bg-white text-black">
       {/* Hero Section */}
@@ -23,10 +17,8 @@ export default function AboutPage() {
         sizes="100vw"
         className="object-cover object-center "
       />
-
       {/* Header */}
       <Header />
-
       {/* Hero Text - Centered */}
       <div className="relative z-20 text-center flex flex-col items-center mt-26">
         <p className="text-white text-[64px] font-semibold mb-1">For Buyers</p>
@@ -40,9 +32,6 @@ export default function AboutPage() {
         className="relative w-full h-[1450px] bg-cover bg-center text-white"
         style={{ backgroundImage: "url('/images/buyers/tower.png')" }}
       >
-  {/* Optional: Dark Overlay */}
-
-
   {/* Title */}
    <div className="absolute top-10 md:top-16 left-0 right-0 z-10">
                     <div className="flex items-center justify-center">
@@ -53,7 +42,6 @@ export default function AboutPage() {
                         <img src="/images/contact/right.png" alt="Line Right" className="flex-grow h-[4px]" />
                     </div>
                 </div>
-
   {/* Steps Positioned Vertically */}
     <div className="relative z-10 max-w-7xl mx-auto text-[24px] font-light leading-snug">
     <div className="absolute left-[40px] top-[140px] w-[448px] h-[129px] p-4">
@@ -63,48 +51,36 @@ export default function AboutPage() {
         (apartment, villa, townhouse)<br  />
         <span className="block mt-4">Consider future investment value and lifestyle preferences</span>
       </p>  
-      
     </div>
-
     <div className="absolute left-[450px] top-[320px] w-[448px] h-[129px] p-4">
-    
         <span className="font-semibold text-pink-400">Step 2: Explore Properties</span>
         <p className="text-[18px] mt-2" >
         Browse listings from top developers like Sobha, Akada, Damac, and Nakheel<br />
-        
        <span className="block mt-4">Schedule property viewings with our expert real estate agents.</span> 
       </p>
     </div>
-
     <div className="absolute right-[15px] top-[540px] w-[448px] h-[129px] p-4 text-left">
-    
         <span className="font-semibold text-pink-400">Step 3: Secure Financing</span><br />
         <p className="text-[18px] mt-2" >
         Choose between a bank mortgage or developer payment plans<br />
         <span className="block mt-4">Submit required documents for loan approval</span>
       </p>
     </div>
-
     <div className="absolute left-[40px] top-[700px] w-[448px] h-[129px] p-4">
-      
         <span className="font-semibold text-pink-400">Step 4: Make an Offer & Sign the Agreement</span><br />
          <p className="text-[18px] mt-2" >
         Negotiate price and sign a Sale Purchase Agreement(SPA)<br />
         <span className="block mt-4">& Pay the intial deposit (usually 5-10% of the property price)</span>
       </p>
     </div>
-
     <div className="absolute left-[450px] top-[900px] w-[448px] h-[129px] p-4">
-      
         <span className="font-semibold text-pink-400">Step 5: Complete Legal & Payment Processes</span><br />
          <p className="text-[18px] mt-2" >
         Arrange property valuation and necessary approvals.<br />
         <span className="block mt-4">Pay the remaining amount as per the agreed plan.</span>
       </p>
     </div>
-
     <div className="absolute right-[15px] top-[1150px] w-[448px] h-[129px] p-4 text-left">
-      
         <span className="font-semibold text-pink-400">Step 6: Property Handover & Registration</span><br />
          <p className="text-[18px] mt-2" >
         Arrange property valuation and necessary approvals.<br />
@@ -113,12 +89,9 @@ export default function AboutPage() {
     </div>
   </div>
   </section>
-
-<section className="relative w-full bg-black py-16 text-white pl-10">
+  <section className="relative w-full bg-black py-16 text-white pl-10">
   {/* Blending Gradient at the Top */}
   <div className="absolute top-0 left-0 w-full h-10 bg-gradient-to-t from-black to-transparent z-0" />
-
-
   <div className="max-w-7xl mx-auto px-4 md:px-6">
     <h2 className="text-[36px] md:text-3xl font-semibold text-pink-400 mb-4">Financing Options</h2>
     <div className="mb-6 text-[16px] font-noraml font-inter">
@@ -138,10 +111,7 @@ export default function AboutPage() {
     </div>
   </div>
 </section>
-
-
       <Footer/>
-      </div>
-      
+      </div> 
 )
 }

@@ -1,5 +1,4 @@
 "use client"
-
 import type React from "react"
 import Image from "next/image"
 
@@ -238,7 +237,6 @@ export default function HomePage() {
                       Submit
                     </button>
                   </div>
-
               </form>
             </div>
           </div>
