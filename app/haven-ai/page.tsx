@@ -14,7 +14,7 @@ export default function HeavenAiPage() {
       <section
         id="hero-section"
         className="relative w-screen h-[790px] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: "url('/images/property/slide2.png')" }}
+        style={{ backgroundImage: "url('/images/property/slide2.webp')" }}
       >
         {/* Header */}
        <Header/>

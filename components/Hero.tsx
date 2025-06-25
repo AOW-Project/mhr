@@ -23,11 +23,20 @@ export default function Hero() {
   }, [isHeroTopInView])
 
   return (
+   
     <section
       id="hero-section"
-      className="relative w-screen h-[670px] bg-cover bg-center overflow-visible"
-      style={{ backgroundImage: "url('/images/carousel/slide.png')" }}
+      className="relative w-screen h-[670px] overflow-visible"
     >
+      <Image
+        src="/images/carousel/slide.webp"
+        alt="Hero Image"
+        fill                    // fills the section
+        priority                // loads it early
+        quality={70}            // compresses efficiently
+        sizes="100vw"
+        className="object-cover object-center -z-10"  // same effect as bg-cover bg-center
+      />
       {/* HEADER */}
       <div
         className="fixed top-0 left-0 w-full z-50 px-6 md:px-20 py-8 transition-colors duration-500"

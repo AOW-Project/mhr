@@ -14,18 +14,26 @@ export default function AboutPage() {
     <div className="font-poppins bg-white text-black">
       {/* Hero Section */}
       <section
-        className="relative w-full h-[750px] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: "url('/images/partners/slide.png')" }}
+        className="relative w-screen h-[750px] flex items-center justify-center overflow-hidden"
       >
+        {/* Optimized Background Image */}
+        <Image
+          src="/images/partners/slide.webp"
+          alt="Partners Background"
+          fill
+          priority
+          quality={70}
+          sizes="100vw"
+          className="object-cover object-center "
+        />
+
+        {/* Optional dark overlay for readability */}
+
+
         {/* Header */}
-=
-         <Header/>
-     
+        <Header />
 
-        {/* Dark Overlay for text readability */}
-        
-
-        {/* Hero Text - Centered */}
+        {/* Hero Text */}
         <div className="relative z-20 text-center flex flex-col items-center mt-20">
           <p className="text-white text-[30px] font-normal mb-2">Mystic Heaven Reality</p>
           <h1 className="text-white text-[48px] md:text-6xl font-semibold">Our Partners</h1>

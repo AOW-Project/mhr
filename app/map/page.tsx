@@ -14,7 +14,7 @@ export default function LuxuryPropertiesPage() {
     <div className="bg-black text-white min-h-screen ">
       {/* HEADER */}
       <div
-        className="fixed top-0 left-0 w-full z-50 px-6 md:px-20 py-8 transition-colors duration-500"
+        className="fixed top-0 left-0 w-screen z-50 px-6 md:px-20 py-8 transition-colors duration-500"
         
       >
        
@@ -35,7 +35,7 @@ export default function LuxuryPropertiesPage() {
       {/* SEARCH BAR */}
         <div className="flex justify-center">
         <div className="flex items-center bg-black border border-white rounded-[8px] px-4 py-3 w-[582px] h-[58px] text-white ml-[-40px]">
-            <Image src="/images/property/map/search.png" alt="Search Icon" className="w-4 h-4 mr-3" />
+            <img src="/images/property/map/search.png" alt="Search Icon" className="w-4 h-4 mr-3" />
             
             <input
             type="text"
@@ -86,7 +86,7 @@ export default function LuxuryPropertiesPage() {
 <div className="grid grid-cols-2 gap-6 ml-4"> {/* Added ml-6 here */}
   {Array(4).fill(0).map((_, idx) => (
     <div key={idx} className="bg-white text-black rounded-xl overflow-hidden w-[280px] h-[365px]">
-      <Image src={`/images/property/${idx + 1}.png`} alt={`Property ${idx + 1}`} width={279} height={185} objectFit="cover" layout="fill" />
+      <Image src={`/images/property/${idx + 1}.png`} alt={`Property ${idx + 1}`} width={279} height={185} objectFit="cover" />
       <div className="p-4 pr-4 pl-4 px-4">
         <p className="text-[14px] text-black mb-1 mt-0">124 Main Ad </p>
         <p className="text-[16px] text-black mb-3">New York, New York, NY</p>
@@ -99,15 +99,15 @@ export default function LuxuryPropertiesPage() {
         <div className="flex justify-around items-center w-[204px] mx-auto mt-3 h-[36px] bg-[#5E2D4F] rounded-md">
           {/* Call Icon */}
           <div className="flex justify-center items-center h-full w-1/3">
-            <Image src="/images/property/map/call.png" className="w-[24px] h-[24px] object-contain" alt="Call" />
+            <img src="/images/property/map/call.png" className="w-[24px] h-[24px] object-contain" alt="Call" />
           </div>
           {/* Email Icon */}
           <div className="flex justify-center items-center h-full w-1/3 border-l border-r border-gray-400">
-            <Image src="/images/property/map/message.png" className="w-[24px] h-[24px] object-contain" alt="Mail" />
+            <img src="/images/property/map/message.png" className="w-[24px] h-[24px] object-contain" alt="Mail" />
           </div>
           {/* WhatsApp Icon */}
           <div className="flex justify-center items-center h-full w-1/3">
-            <Image src="/images/property/map/whatsapp.png" className="w-[24px] h-[24px] object-contain" alt="WhatsApp" />
+            <img src="/images/property/map/whatsapp.png" className="w-[24px] h-[24px] object-contain" alt="WhatsApp" />
           </div>
         </div>
       </div>

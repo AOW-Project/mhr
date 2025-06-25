@@ -12,19 +12,29 @@ export default function AboutPage() {
   return (
     <div className="font-poppins bg-white text-black">
       {/* Hero Section */}
-      <section
-        className="relative w-full h-[750px] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: "url('/images/buyers/slide.png')" }}
-      >
-        {/* Header */}
-         <Header/>
+    <section className="relative w-screen h-[750px] flex items-center justify-center overflow-hidden">
+      {/* Optimized Background Image */}
+      <Image
+        src="/images/buyers/slide.webp"
+        alt="Buyers Slide"
+        fill
+        priority
+        quality={70}
+        sizes="100vw"
+        className="object-cover object-center "
+      />
 
-        {/* Hero Text - Centered */}
-        <div className="relative z-20 text-center flex flex-col items-center mt-26">
-          <p className="text-white text-[64px] font-semibold mb-1">For Buyers</p>
-          <h1 className="text-white text-[24px] md:text-2xl font-normal">Your Guide to buying your dream home</h1>
-        </div>
-      </section>
+      {/* Header */}
+      <Header />
+
+      {/* Hero Text - Centered */}
+      <div className="relative z-20 text-center flex flex-col items-center mt-26">
+        <p className="text-white text-[64px] font-semibold mb-1">For Buyers</p>
+        <h1 className="text-white text-[24px] md:text-2xl font-normal">
+          Your Guide to buying your dream home
+        </h1>
+      </div>
+    </section>
       {/* Buying Guide Section */}
        <section
         className="relative w-full h-[1450px] bg-cover bg-center text-white"

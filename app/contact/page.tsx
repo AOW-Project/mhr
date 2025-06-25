@@ -12,28 +12,36 @@ export default function ContactPage() {
     return (
         <div className="font-poppins bg-white text-black" style={{ overflow: 'hidden' }}>
             {/* Hero Section */}
-            <section
-                id="hero-section"
-                className="relative w-screen h-[750px] bg-cover bg-center overflow-visible"
-                style={{ backgroundImage: "url('/images/contact/slide.png')" }}
-            >
-                {/* HEADER */}
-              <Header/>
+            <section className="relative w-screen h-[750px] flex items-center justify-center overflow-hidden">
+                {/* Optimized Background Image */}
+                <Image
+                    src="/images/contact/slide.webp"
+                    alt="Contact Slide"
+                    fill
+                    priority
+                    quality={70}
+                    sizes="100vw"
+                    className="object-cover object-center "
+                />
+
+                {/* Dark Overlay */}
+                
+
+                {/* Header */}
+                <Header />
 
                 {/* Hero Text */}
-                <div className="absolute inset-0 bg-black/40" />
                 <div className="relative z-10 flex flex-col justify-center items-center text-center px-4 md:px-0 w-full h-full pt-30">
-                    <h1 className="text-[54px] md:text-5xl font-medium mb-6 text-white w-[871px] text-center leading-[1] flex flex-col items-center justify-center">
-                        <span>Where Finding Home Feels like</span>
-                        <span className="mt-4">Destiny</span>
+                    <h1 className="text-[54px] md:text-5xl font-medium mb-6 text-white max-w-[871px] leading-[1]">
+                    <span>Where Finding Home Feels like</span>
+                    <span className="mt-4 block">Destiny</span>
                     </h1>
 
                     <button className="w-[282px] h-[50px] mt-2 text-white rounded-[100px] bg-[#F627B4] text-[20px] font-medium transition">
-                        Lets Connect
+                    Let's Connect
                     </button>
                 </div>
-            </section>
-
+                </section>
             {/* Contact Page Content from PDF */}
             <section
                 className="w-full h-auto md:h-[940px] mx-auto px-6 md:px-12 relative " // Main section with its own padding

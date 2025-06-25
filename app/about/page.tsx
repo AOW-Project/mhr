@@ -12,20 +12,28 @@ export default function AboutPage() {
   return (
     <div className="font-poppins bg-white text-black">
       {/* Hero Section */}
-      <section
-        className="relative w-full h-[750px] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: "url('/images/about/slide.png')" }}
-      >
-        {/* Header */}
-        <Header/>
+      <section className="relative w-screen h-[750px] flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <Image
+        src="/images/about/slide.webp"
+        alt="About Slide"
+        fill
+        priority
+        quality={70}
+        sizes="100vw"
+        className="object-cover object-center "
+      />
 
-        {/* Hero Text */}
-        <div className="flex justify-center text-center px-4 md:px-0 w-full mt-6">
-          <h1 className="text-[66px] font-semibold whitespace-nowrap text-white">
-            Your Gateway To Luxury Living
-          </h1>
-        </div>
-      </section>
+      {/* Header */}
+      <Header />
+
+      {/* Hero Text */}
+      <div className="flex justify-center text-center px-4 md:px-0 w-full mt-10 z-10">
+        <h1 className="text-[66px] font-semibold whitespace-nowrap text-white">
+          Your Gateway To Luxury Living
+        </h1>
+      </div>
+    </section>
 
       {/* About Content */}
     <section className="relative bg-slate-900 text-white min-h-[1880px] w-full overflow-visible">

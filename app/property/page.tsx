@@ -20,7 +20,7 @@ export default function Hero() {
       <section
         id="hero-section"
         className="relative w-screen h-[750px] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/property/slide2.png')" }}
+        style={{ backgroundImage: "url('/images/property/slide2.webp')" }}
       >
         {/* Header */}
        
@@ -124,10 +124,10 @@ export default function Hero() {
                 className="bg-white rounded-xl w-[381px] h-[460px] shadow-md overflow-hidden flex flex-col"
               >
                 <div className="w-full h-[252px] relative">
-                  <Image
+                  <img
                     src={`/images/property/${id}.png`}
                     alt={`Property ${id}`}
-                    fill
+               
                     className="object-cover"
                   />
                 </div>
