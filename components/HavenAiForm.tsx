@@ -215,7 +215,8 @@ export default function HeavenAiForm() {
               ) : (
                 <>
                   <div className="grid grid-cols-2 gap-6 mb-10 pl-14 pt-6">
-                    {steps[step].options.map(({ label, icon }: any) => (
+                    {steps[step].options?.map(({ label, icon }: any) => (
+
                       <button
                         key={label}
                         onClick={() => handleOptionClick(label)}

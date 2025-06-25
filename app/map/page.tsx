@@ -2,53 +2,24 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+
 import { useRouter } from "next/navigation"
 import Footer from "@/components/Footer"
+import Header from "@/components/Header"
 
 export default function LuxuryPropertiesPage() {
-  const [headerBg, setHeaderBg] = useState("transparent")
-  const router = useRouter()
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setHeaderBg(window.scrollY > 50 ? "#5E2D4F" : "transparent")
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  
 
   return (
     <div className="bg-black text-white min-h-screen ">
       {/* HEADER */}
       <div
         className="fixed top-0 left-0 w-full z-50 px-6 md:px-20 py-8 transition-colors duration-500"
-        style={{ backgroundColor: headerBg }}
+        
       >
-        <header className="flex justify-between items-center text-white text-[16.92px] max-w-7xl mx-auto">
-          <Image src="/images/mhr- logo.svg" alt="Logo" width={60} height={80} />
-          <nav className="flex space-x-6 items-center">
-            <Link href="/">Home</Link>
-            <span className="h-4 border-l border-white" />
-            <Link href="/property">▸ Properties</Link>
-            <span className="h-4 border-l border-white" />
-            <Link href="/about">About Us</Link>
-            <span className="h-4 border-l border-white" />
-            <Link href="/buyers">For Buyers</Link>
-            <span className="h-4 border-l border-white" />
-            <Link href="/partners">Partners</Link>
-            <span className="h-4 border-l border-white" />
-            <Link href="/contact">Contact Us</Link>
-          </nav>
-          <Image
-            src="/images/quote.svg"
-            alt="Quote"
-            width={35}
-            height={40}
-            className="ml-6"
-          />
-        </header>
+       
       </div>
+      <Header/>
 
       {/* TOP IMAGE */}
       <div className="pt-32">
@@ -115,7 +86,7 @@ export default function LuxuryPropertiesPage() {
 <div className="grid grid-cols-2 gap-6 ml-4"> {/* Added ml-6 here */}
   {Array(4).fill(0).map((_, idx) => (
     <div key={idx} className="bg-white text-black rounded-xl overflow-hidden w-[280px] h-[365px]">
-      <Image src={`/images/property/${idx + 1}.png`} alt={`Property ${idx + 1}`} width={279} height={185} />
+      <Image src={`/images/property/${idx + 1}.png`} alt={`Property ${idx + 1}`} width={279} height={185} objectFit="cover" layout="fill" />
       <div className="p-4 pr-4 pl-4 px-4">
         <p className="text-[14px] text-black mb-1 mt-0">124 Main Ad </p>
         <p className="text-[16px] text-black mb-3">New York, New York, NY</p>
