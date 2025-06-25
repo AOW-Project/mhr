@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Footer from './Footer';
+import Image from 'next/image';
 
 const properties = [
   { name: 'Danube', image: '/images/ai/danube.png' },
@@ -19,7 +20,7 @@ export default function MatchResultsPage() {
     <div className="min-h-screen bg-black text-white px-6 py-10">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
-        <img src="/logo.svg" alt="Logo" className="h-10" />
+        <Image src="/logo.svg" alt="Logo" className="h-10" />
         <nav className="hidden md:flex space-x-6 text-white/80 text-sm">
           <a href="#">Home</a>
           <a href="#">Properties</a>
@@ -34,7 +35,7 @@ export default function MatchResultsPage() {
       {/* HeavenAI Title */}
       <div className="text-center mb-10">
         <h1 className="text-[37px] md:text-4xl font-semibold text-[#B1007B]">
-          HeavenAI <img src="/images/ai.png" alt="AI icon" className="inline-block w-6 ml-1" />
+          HeavenAI <Image src="/images/ai.png" alt="AI icon" className="inline-block w-6 ml-1" />
         </h1>
         <p className="text-white text-[24px] font-semibold mt-2">Smart Search For Smart Living</p>
       </div>
@@ -69,7 +70,7 @@ export default function MatchResultsPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
         {properties.map((property, index) => (
           <div key={index} className="relative overflow-hidden rounded-xl border border-white/20">
-            <img
+            <Image
               src={property.image}
               alt={property.name}
               className="w-full h-[260px] object-cover"

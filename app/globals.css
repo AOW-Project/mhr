@@ -76,21 +76,36 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: black;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00647d;
+  background: black;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #004e63;
+  background: black;
 }
 
 /* Focus styles for accessibility */
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid #00647d;
+  outline: 2px solid black;
   outline-offset: 2px;
+}
+/* Container that wraps your full-screen sections */
+.snap-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+/* Each child section will snap to the top */
+.snap-container > * {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.some-class {
+  @apply border border-brandPurple;
 }

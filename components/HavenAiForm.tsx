@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BsHouseDoor, BsGeoAlt } from 'react-icons/bs';
 import { FaUsers, FaUser } from 'react-icons/fa';
+import Image from 'next/image';
 
 const steps = [
   {
@@ -230,7 +231,7 @@ export default function HeavenAiForm() {
                           />
                         </div>
                         <div className="flex items-center gap-4">
-                          <img
+                          <Image
                             src={icon}
                             alt={label}
                             className={`w-10 h-10 ${formData[step] === label ? 'filter brightness-150' : 'brightness-100'}`}

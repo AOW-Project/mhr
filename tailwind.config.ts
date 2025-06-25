@@ -8,9 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        // now bg-background → background-color: hsl(var(--background))
+        background: "hsl(var(--background))",
+        border:     "hsl(var(--border))",
+
+        // your custom purple:
+        brandPurple: "#5E2D4F"
+      },
       fontFamily: {
         poppins: ["var(--font-poppins)", "sans-serif"],
-         inter: ['var(--font-inter)'],
+        inter:   ["var(--font-inter)"],
       },
     },
   },

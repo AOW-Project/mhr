@@ -47,7 +47,13 @@ export default function ContactPage() {
                             <span className="h-4 border-l border-white" />
                             <Link href="/contact">▸ Contact Us</Link>
                         </nav>
-                        <img src="/images/quote.svg" alt="Quote" className="h-[40px] w-[35px] ml-6" />
+                        <Image
+                            src="/images/quote.svg"
+                            alt="Quote"
+                            width={35}
+                            height={40}
+                            className="ml-6"
+                            />
                     </header>
                 </div>
 

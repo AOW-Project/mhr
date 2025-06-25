@@ -40,7 +40,13 @@ export default function LuxuryPropertiesPage() {
             <span className="h-4 border-l border-white" />
             <Link href="/contact">Contact Us</Link>
           </nav>
-          <img src="/images/quote.svg" alt="Quote" className="h-[40px] w-[35px] ml-6" />
+          <Image
+            src="/images/quote.svg"
+            alt="Quote"
+            width={35}
+            height={40}
+            className="ml-6"
+          />
         </header>
       </div>
 
@@ -58,7 +64,7 @@ export default function LuxuryPropertiesPage() {
       {/* SEARCH BAR */}
         <div className="flex justify-center">
         <div className="flex items-center bg-black border border-white rounded-[8px] px-4 py-3 w-[582px] h-[58px] text-white ml-[-40px]">
-            <img src="/images/property/map/search.png" alt="Search Icon" className="w-4 h-4 mr-3" />
+            <Image src="/images/property/map/search.png" alt="Search Icon" className="w-4 h-4 mr-3" />
             
             <input
             type="text"
@@ -122,15 +128,15 @@ export default function LuxuryPropertiesPage() {
         <div className="flex justify-around items-center w-[204px] mx-auto mt-3 h-[36px] bg-[#5E2D4F] rounded-md">
           {/* Call Icon */}
           <div className="flex justify-center items-center h-full w-1/3">
-            <img src="/images/property/map/call.png" className="w-[24px] h-[24px] object-contain" alt="Call" />
+            <Image src="/images/property/map/call.png" className="w-[24px] h-[24px] object-contain" alt="Call" />
           </div>
           {/* Email Icon */}
           <div className="flex justify-center items-center h-full w-1/3 border-l border-r border-gray-400">
-            <img src="/images/property/map/message.png" className="w-[24px] h-[24px] object-contain" alt="Mail" />
+            <Image src="/images/property/map/message.png" className="w-[24px] h-[24px] object-contain" alt="Mail" />
           </div>
           {/* WhatsApp Icon */}
           <div className="flex justify-center items-center h-full w-1/3">
-            <img src="/images/property/map/whatsapp.png" className="w-[24px] h-[24px] object-contain" alt="WhatsApp" />
+            <Image src="/images/property/map/whatsapp.png" className="w-[24px] h-[24px] object-contain" alt="WhatsApp" />
           </div>
         </div>
       </div>
