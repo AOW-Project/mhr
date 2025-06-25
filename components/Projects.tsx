@@ -2,33 +2,38 @@
 
 function ProjectCard({ title, image }: { title: string; image: string }) {
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-lg w-[379px] h-[475px]">
-      <div className="h-[235px] w-[379px] bg-cover bg-center" style={{ backgroundImage: `url(${image})` }}></div>
-      <div className="p-4 pl-6 pr-6">
+    <div className="bg-white rounded-lg overflow-hidden shadow-lg w-full md:w-[379px] h-auto md:h-[475px]">
+      <div
+        className="h-[200px] md:h-[235px] w-full bg-cover bg-center"
+        style={{ backgroundImage: `url(${image})` }}
+      ></div>
+      <div className="p-4 md:px-6">
         <div className="flex items-center justify-between">
-          <h3 className="font-semibold text-[32px]  text-black font-poppins">{title}</h3>
+          <h3 className="font-semibold text-[18px] md:text-[32px] text-black font-poppins">
+            {title}
+          </h3>
           <div className="flex items-center text-gray-600">
-            <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-3.5 h-3.5 md:w-4 md:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
               <path
                 fillRule="evenodd"
                 d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                 clipRule="evenodd"
               />
             </svg>
-            <span className="text-[16px] font-poppins">Location</span>
+            <span className="text-[12px] md:text-[16px] font-poppins">Location</span>
           </div>
         </div>
-        <p className="text-black text-[20px] font-semibold mb-2 font-poppins">Price</p>
-       <p className="text-[13px] text-black leading-relaxed font-light font-poppins text-left w-[338px] h-[100px] overflow-hidden">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.
-      </p>
-
+        <p className="text-black text-[14px] md:text-[20px] font-semibold mb-2 font-poppins">Price</p>
+        <p className="text-[11px] md:text-[13px] text-black leading-relaxed font-light font-poppins text-left w-full md:w-[338px] h-[100px] overflow-hidden">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
       </div>
     </div>
-  )
+  );
 }
+
 
 export default function Projects() {
   return (
