@@ -11,140 +11,152 @@ export default function Hero() {
     <>
       {/* Hero Section */}
       <section
-        id="hero-section"
-        className="relative w-screen h-[750px] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/property/slide2.webp')" }}
+      id="hero-section"
+      className="relative w-screen h-[217px] md:h-[750px] bg-cover bg-center"
+      style={{ backgroundImage: "url('/images/property/slide2.webp')" }}
+    >
+      {/* Header */}
+      <Header />
+
+      {/* Hero Content */}
+    <div className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4 md:px-0 pt-10 md:pt-4">
+      <p className="text-[16px] md:text-[24px] font-normal  mb-0.5 md:mb-2">
+        Mystic Heaven Reality
+      </p>
+      <h1 className="text-[16px] md:text-[48px] font-normal mb-1 md:mb-6">
+        View Properties
+      </h1>
+    </div>
+
+      {/* HavenAI + View Properties Map */}
+      <div className="relative z-30 flex flex-col items-center -mt-8 md:-mt-24">
+      {/* HavenAI button */}
+      <div
+        className="flex items-center justify-center rounded-t-[10px] shadow-md
+                  w-[132px] h-[35px] md:w-[247px] md:h-[65px]"
       >
-        {/* Header */}
-       
-          <Header/>
-       
-        {/* Hero Content */}
-        <div className="relative z-20 flex flex-col items-center justify-center  pt-6 h-full text-white text-center px-4 md:px-0">
-          <p className="text-[24px] font-normal mb-2">Mystic Heaven Reality</p>
-          <h1 className="text-[48px] md:text-5xl font-normal mb-6">View Properties</h1>
-        </div>
-
-        {/* HavenAI + View Properties Map */}
-        <div className="relative z-30 flex flex-col items-center -mt-24">
-          <div className="bg-white flex items-center justify-center rounded-t-[10px] shadow-md" style={{ width: "247px", height: "65px" }}>
-            <button
-              onClick={() => router.push('/haven-ai')}
-              className="text-[#5E2D4F] text-[20px] font-semibold flex items-center gap-2"
-            >
-              HavenAI
-              <img src="/images/property/ai.png" alt="AI Icon" className="w-5 h-5" />
-            </button>
-          </div>
         <button
-          onClick={() => router.push('/map')} // ✅ navigate to /map
-          className="bg-[#5E2D4F] text-white rounded-[10px] text-[24px] font-semibold flex items-center justify-center gap-2"
-          style={{ width: "450px", height: "77px" }}
+          onClick={() => router.push('/haven-ai')}
+          className="text-[#5E2D4F] bg-white text-[10px]  md:text-[20px] font-semibold flex items-center justify-center gap-2 px-2 py-1 md:px-4 md:py-2 rounded-t-[5px] w-full h-full"
         >
-          <img src="/images/property/map.png" alt="Map Icon" className="w-6 h-6" />
-          View Properties Map
+          HavenAI
+          <img src="/images/property/ai.png" alt="AI Icon" className="w-4 h-4 md:w-5 md:h-5" />
         </button>
-        </div>
-      </section>
+      </div>
 
-      {/* Properties Section */}
-     <section className="bg-black px-8 md:px-20 py-12 font-poppins">
-  <div className="flex flex-col md:flex-row gap-12 mt-16 pb-8">
-    {/* Filters */}
-    <aside className="w-full md:w-[358px] h-[820px] bg-white p-6 rounded-lg shadow-md">
-      <div className="pl-4"> {/* Added padding container */}
-        <h2 className="text-[21px] font-medium mb-6">Filters</h2>
+      {/* View Properties Map button */}
+      <button
+        onClick={() => router.push('/map')}
+        className="bg-[#5E2D4F] text-white rounded-[10px] text-[11px] md:text-[24px] font-semibold flex items-center justify-center gap-2 
+                  w-[282px] h-[41px] md:w-[450px] md:h-[77px] mt-0"
+      >
+        <img src="/images/property/map.png" alt="Map Icon" className="w-5 h-5 md:w-6 md:h-6" />
+        View Properties Map
+      </button>
+    </div>
 
-        <div className="mb-5">
-          <label className="block text-[17px] font-medium mb-3">Location</label>
-        </div>
-        <hr className="my-5 w-[159px] border-t-2 border-gray-600" />
+</section>
 
-        <div className="mb-5">
-          <label className="block text-[17px] max-w-[50%] font-medium mb-3">Price Range</label>
-          <input 
-            type="range" 
-            min="300000" 
-            max="500000" 
-            className="w-full mb-1 accent-black" 
-          />
-          <div className="text-[17px] flex justify-between text-black px-1">
-            <span>$300000</span>
-            <span>$500000</span>
+{/* Recently Searched Section */}
+
+<section className="bg-black px-4 md:px-20 py-4 md:py-10 font-poppins">
+  <h2 className="text-white text-[15px] md:text-[36px] font-normal mb-6 md:mb-8 mt-10 md:mt-12">
+    Recently Searched
+  </h2>
+
+  <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 md:gap-6 mt-0">
+    {[...Array(6)].map((_, index) => (
+      <div
+        key={`recently-searched-${index}`}
+        className="bg-white rounded-[4px] md:rounded-xl w-[153px] h-[223px] md:w-[381px] md:h-[468px] shadow-md overflow-hidden flex flex-col mx-auto"
+      >
+          <div className="w-full h-[100px] md:h-[252px] relative">
+            <img
+              src={`/images/property/${(index % 4) + 1}.png`}
+              alt={`Recently Searched Property ${index + 1}`}
+              className="object-cover w-full h-full"
+            />
           </div>
-        </div>
-        <hr className="my-5 w-[300px] border-t-1 border-gray-600" />
+        <div className="p-2 flex flex-col justify-between flex-1 px-3 md:p-4 md:px-8">
+      <div>
+      <p className="text-[12px] text-black mb-0 md:text-[17px] md:mb-1">124 Main Ad</p>
+      <p className="text-[10px] text-black mb-1 md:text-[17px] md:mb-10">New York, New York, NY</p>
 
-        <div className="mb-5">
-          <p className="text-[17px] font-medium mb-3">Property Type</p>
-          {["Apartments", "Villa", "Farm House", "Plot/Land"].map((type) => (
-            <div key={type} className="flex items-center mb-2 text-[15px]">
-              <input type="checkbox" id={type} className="mr-3 h-4 w-4 accent-black" />
-              <label htmlFor={type}>{type}</label>
-            </div>
-          ))}
-        </div>
-        <hr className="my-5 w-[300px] border-t-1 border-gray-600" />
+      {/* Move this block downward only on mobile */}
+      <div className="flex justify-between px-0 mt-6 md:mt-0 mb-2 md:mb-1">
+        <p className="text-[12px] font-semibold text-black md:text-[17px]">$300000</p>
+        <p className="text-[12px] font-semibold text-black md:text-[17px]">Villa</p>
+      </div>
+    </div>
 
-        <div className="mb-5">
-          <p className="text-[17px] font-medium mb-3">Bedroom</p>
-          {["1", "2", "3", "4+"].map((num) => (
-            <div key={num} className="flex items-center mb-2 text-[15px]">
-              <input type="checkbox" id={`bed-${num}`} className="mr-3 h-4 w-4 accent-black" />
-              <label htmlFor={`bed-${num}`}>{num}</label>
-            </div>
-          ))}
-        </div>
-        <hr className="my-5 w-[300px] border-t-1 border-gray-600" />
+    {/* View Details Button (Mobile only) - less top margin */}
+    <button
+      className="bg-[#5E2D4F] text-white text-[10px] font-medium rounded-[94px] mt-1 md:mt-1  mb-2 mx-auto block md:hidden w-[113px] h-[22px]"
+    >
+      View Details
+    </button>
 
-        <div>
-          <p className="text-[17px] font-medium mb-3">Availability</p>
-          {["Under Construction", "Ready to Move", "Resale"].map((status) => (
-            <div key={status} className="flex items-center mb-2 text-[15px]">
-              <input type="checkbox" id={status} className="mr-3 h-4 w-4 accent-black" />
-              <label htmlFor={status}>{status}</label>
+    {/* View Details Button (Desktop only) - untouched */}
+    <button
+      className="bg-[#5E2D4F] text-white text-[16px] font-medium rounded-[94px] mt-2 mx-auto hidden md:block w-full h-[47px]"
+    >
+      View Details
+    </button>
+  </div>
+    </div>
+    ))}
+  </div>
+</section>
+
+{/* Recommended Section */}
+    <section className="bg-black px-4 md:px-20 py-2 md:py-8 font-poppins">
+      <h2 className="text-white text-[15px] md:text-[36px] font-normal mb-6 md:mb-8">
+        Recommended
+      </h2>
+
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 md:gap-6 mb-6">
+        {[...Array(6)].map((_, index) => (
+          <div
+            key={`recommended-${index}`}
+            className="bg-white rounded-[4px] md:rounded-xl w-[153px] h-[223px] md:w-[381px] md:h-[468px] shadow-md overflow-hidden flex flex-col mx-auto"
+          >
+            <div className="w-full h-[100px] md:h-[252px] relative">
+              <img
+                src={`/images/property/${(index % 4) + 1}.png`}
+                alt={`Recommended Property ${index + 1}`}
+                className="object-cover w-full h-full"
+              />
             </div>
-          ))}
+            <div className="p-2 flex flex-col justify-between flex-1 px-3 md:p-4 md:px-8">
+            <div>
+        <p className="text-[12px] text-black mb-0 md:text-[17px] md:mb-1">124 Main Ad</p>
+        <p className="text-[10px] text-black mb-1 md:text-[17px] md:mb-10">New York, New York, NY</p>
+
+        {/* Move this block downward only on mobile */}
+        <div className="flex justify-between px-0 mt-6 md:mt-0 mb-2 md:mb-1">
+          <p className="text-[12px] font-semibold text-black md:text-[17px]">$300000</p>
+          <p className="text-[12px] font-semibold text-black md:text-[17px]">Villa</p>
         </div>
       </div>
-    </aside>
 
-          {/* Property Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 rounded-[8px]">
-            {[1, 2, 3, 4].map((id) => (
-              <div
-                key={id}
-                className="bg-white rounded-xl w-[381px] h-[460px] shadow-md overflow-hidden flex flex-col"
-              >
-                <div className="w-full h-[252px] relative">
-                  <img
-                    src={`/images/property/${id}.png`}
-                    alt={`Property ${id}`}
-               
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4 flex flex-col justify-between flex-1 px-8">
-                  <div>
-                    <p className="text-[17px] text-black mb-1">124 Main Ad </p>
-                    <p className="text-[17px] text-black mb-12">New York, New York,  NY</p>
-                    <div className="flex justify-between px-1 mb-4">
-                        <p className="text-[17px] font-semibold text-black">$300000</p>
-                        <p className="text-[17px] font-semibold text-black">Villa</p>
-                        </div>
-                  </div>
-                  <button
-                    className="bg-[#5E2D4F] text-white text-[16px] font-medium rounded-[94px] mt-10"
-                    style={{ width: "320px", height: "43px", margin: "0 auto" }}
-                  >
-                    View Details
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* View Details Button (Mobile only) - less top margin */}
+      <button
+        className="bg-[#5E2D4F] text-white text-[10px] font-medium rounded-[94px] mt-1 md:mt-1  mb-2 mx-auto block md:hidden w-[113px] h-[22px]"
+      >
+        View Details
+      </button>
+
+      {/* View Details Button (Desktop only) - untouched */}
+      <button
+        className="bg-[#5E2D4F] text-white text-[16px] font-medium rounded-[94px] mt-2 mx-auto hidden md:block w-full h-[47px]"
+      >
+        View Details
+      </button>
+    </div>
+      </div>
+    ))}
+  </div>
+</section>
       <Footer />
     </>
   )
