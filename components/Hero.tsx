@@ -54,7 +54,7 @@ export default function Hero() {
           {/* Mobile version - smaller, but still 2 lines */}
           <div className="md:hidden">
             <h2 className="text-white text-[20px] font-Poppins font-semibold">
-              Mystic Haven Reality
+              Mystic Haven Realty
             </h2>
             <h1 className="text-white text-[22px] font-bold font-Poppins mt-1">
               Your Dream <span className="text-[#FF96DD]">Home</span>, Awaits
@@ -63,7 +63,7 @@ export default function Hero() {
 
           {/* Desktop version - original */}
           <div className="hidden md:block">
-            <h2 className="text-white text-[40px] font-Poppins">Mystic Haven Reality</h2>
+            <h2 className="text-white text-[40px] font-Poppins">Mystic Haven Realty</h2>
             <h1 className="text-white text-[48px] font-bold mt-2 font-Poppins">
               Your Dream <span className="text-[#FF96DD]">Home</span>, Awaits
             </h1>

@@ -3,11 +3,11 @@
 import { useState } from "react";
 
 const projects = [
-  { title: "Title ", image: "/images/projects/1.png" },
-  { title: "Title ", image: "/images/projects/2.png" },
-  { title: "Title ", image: "/images/projects/3.png" },
-  { title: "Title ", image: "/images/projects/4.png" },
-  { title: "Title ", image: "/images/projects/5.png" },
+  { title: "Title", image: "/images/projects/1.png" },
+  { title: "Title", image: "/images/projects/2.png" },
+  { title: "Title", image: "/images/projects/3.png" },
+  { title: "Title", image: "/images/projects/4.png" },
+  { title: "Title", image: "/images/projects/5.png" },
 ];
 
 function ProjectCard({
@@ -22,17 +22,16 @@ function ProjectCard({
   return (
     <div
       className={`rounded-lg overflow-hidden shadow-lg shrink-0 transition-all duration-300
-     ${isCenter
-      ? "w-[220px] scale-100 opacity-100 z-10"
-      : "w-[160px] scale-75 opacity-40 z-0"}
-
-       bg-white md:w-[379px] md:h-[475px]`}
+        ${isCenter
+          ? "w-[220px] h-[320px] md:h-[475px] scale-100 opacity-100 z-10"
+          : "w-[160px] h-[280px] md:h-[475px] scale-75 opacity-40 z-0"}
+        bg-white md:w-[379px]`}
     >
       <div
-        className={`h-[160px] md:h-[250px] w-full bg-cover bg-center`}
+        className="h-[160px] md:h-[250px] w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${image})` }}
       />
-      <div className="p-3 md:px-6">
+      <div className="pt-2 pb-3 px-2 md:pt-6 md:pb-6 md:px-6">
         <div className="flex items-center justify-between mb-1">
           <h3 className="text-[14px] md:text-[32px] font-semibold text-black font-poppins">
             {title}
@@ -56,9 +55,9 @@ function ProjectCard({
           Price
         </p>
         <p className="text-[10px] md:text-[13px] text-black leading-normal font-light font-poppins w-full md:w-[338px]">
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </div>
     </div>
@@ -66,74 +65,58 @@ function ProjectCard({
 }
 
 export default function Projects() {
-  const [currentIndex, setCurrentIndex] = useState(1); // Center start
+  const [currentIndex, setCurrentIndex] = useState(1);
 
   const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? projects.length - 1 : prev - 1
-    );
+    setCurrentIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === projects.length - 1 ? 0 : prev + 1
-    );
+    setCurrentIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
   };
 
   const getCard = (offset: number) => {
-    const index =
-      (currentIndex + offset + projects.length) % projects.length;
+    const index = (currentIndex + offset + projects.length) % projects.length;
     return projects[index];
   };
 
   return (
-    <section className="pt-16 md:pt-32 pb-8 md:pb-20 bg-[#000000]">
+    <section className="pt-10 pb-10 md:pt-32 md:pb-20 bg-[#000000]">
       <div className="w-full">
-        {/* Header Line */}
-        <div className="relative flex items-center justify-center mb-4">
-          <div
-            className="w-full h-[5px] absolute top-1/2 transform -translate-y-1/2"
-            style={{
-              background: `
-                linear-gradient(
-                  90deg,
-                  #ffffff 0%,
-                  #ffffff 5%,
-                  rgba(255, 255, 255, 0.8) 10%,
-                  rgba(255, 255, 255, 0.5) 20%,
-                  rgba(255, 255, 255, 0.2) 30%,
-                  transparent 40%,
-                  transparent 50%,
-                  transparent 60%,
-                  rgba(255, 255, 255, 0.2) 70%,
-                  rgba(255, 255, 255, 0.5) 80%,
-                  rgba(255, 255, 255, 0.8) 90%,
-                  #ffffff 95%,
-                  #ffffff 100%
-                )
-              `,
-            }}
-          />
-          <div className="relative z-10 bg-[#000000] px-4 md:px-8">
-            <h2 className="text-[20px] md:text-[40px] font-semibold text-center text-[#FFAE6A] font-poppins whitespace-nowrap">
+        {/* Header Section */}
+        <div className="pt-10 md:pt-0">
+          {/* ✅ Mobile: Edge-to-edge gradient lines */}
+          <div className="flex md:hidden items-center justify-between w-full mb-6 px-0">
+            <div className="flex-1 h-[1px] bg-gradient-to-r from-white via-white to-transparent" />
+            <h2 className="mx-2 text-[20px] font-semibold text-[#FFAE6A] font-poppins whitespace-nowrap">
               Featured Projects
             </h2>
+            <div className="flex-1 h-[1px] bg-gradient-to-l from-white via-white to-transparent" />
+          </div>
+
+          {/* ✅ Desktop: Centered thicker lines */}
+          <div className="hidden md:flex items-center justify-center w-full mb-10 px-0">
+            <div className="flex-1 h-[5px] bg-gradient-to-r from-white to-transparent" />
+            <h2 className="mx-6 text-[40px] font-semibold text-[#FFAE6A] font-poppins whitespace-nowrap">
+              Featured Projects
+            </h2>
+            <div className="flex-1 h-[5px] bg-gradient-to-l from-white to-transparent" />
           </div>
         </div>
 
         {/* Subtitle */}
         <p className="text-[13px] md:text-[20px] text-white text-center font-normal font-poppins mb-10 md:mb-16 px-4">
-          Showcasing The Best Deal Of Mystic Heavcen Realty
+          Showcasing The Best Deal Of Mystic Heaven Realty
         </p>
 
-        {/* MOBILE layout with 3 visible cards */}
-      <div className="block md:hidden w-full flex justify-center items-center gap-1">
+        {/* Mobile Carousel */}
+        <div className="block md:hidden w-full flex justify-center items-center gap-1">
           <ProjectCard {...getCard(-1)} />
           <ProjectCard {...getCard(0)} isCenter />
           <ProjectCard {...getCard(1)} />
         </div>
 
-        {/* DESKTOP grid (unchanged) */}
+        {/* Desktop Grid */}
         <div className="hidden md:block max-w-7xl mx-auto px-10">
           <div className="grid grid-cols-3 gap-2">
             {projects.slice(0, 3).map((project, idx) => (
@@ -147,7 +130,7 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Navigation - Mobile Only */}
+        {/* Mobile Navigation */}
         <div className="mt-6 flex justify-center items-center gap-4 md:hidden text-white text-[12px] font-poppins">
           <button onClick={prevSlide}>&lt;</button>
           <span className="font-medium">

@@ -146,77 +146,81 @@ export default function AboutPage() {
           </div>
         </div>
 
+        </div>
       </div>
     </div>
-  </div>
-</section>
- {/* Contact Call-to-Action Section */}
+  </section>
+  {/* Contact Call-to-Action Section */}
 
-<section className="relative h-[200px] sm:h-[250px] md:h-[300px] flex items-center justify-center mt-10 md:mt-20 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-40">
-  <div className="relative w-full max-w-6xl h-full overflow-hidden rounded-lg shadow-xl">
-    {/* Background Image */}
-    <Image
-      src="images/about/contact.png"
-      alt="Contact background"
-      fill
-      className="object-cover object-center z-0"
-      priority
-    />
-    {/* Content Container */}
-    <div className="relative z-20 text-white text-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 max-w-[1200px] mx-auto pt-8 sm:pt-12 md:pt-20">
-      {/*
-        H2 Font Size:
-        - text-base for mobile (even smaller).
-        - sm:text-[28px], md:text-[32px], lg:text-[36px] preserve desktop font sizes.
-      */}
-      <h2 className="text-base sm:text-[28px] md:text-[32px] lg:text-[36px] font-semibold leading-tight mb-4 md:mb-6">
-        Your Dream Home Is Just A Step Away Let
-        <br />
-        Mystic Haven Realty Guide You
-      </h2>
-
-      <Link
-        href="/contact"
-        // Button Font Size: text-xs for mobile (already smallest, maintaining this).
-        // md:text-base preserves desktop button font size.
-        className="inline-block px-8 py-2 md:px-16 md:py-3 bg-[#5E2D4F] text-white rounded-[10px] font-bold shadow-md hover:bg-[#4a1f3d] transition-colors text-xs md:text-base"
-      >
-        Contact Us
-      </Link>
-    </div>
-  </div>
-</section>
-{/* Explore Projects Section */}
-<section className="bg-white py-10 md:py-20 px-4 md:px-8 lg:px-12">
-  <div className="max-w-[1200px] mx-auto text-center px-4 md:px-6 lg:px-8">
-    <h2 className="text-[20px] md:text-[28px] lg:text-[32px] font-semibold text-[#1c1c1c] mb-4">
-      Explore New Off Plan Project
-    </h2>
-    <p className="mx-auto text-black text-[14px] md:text-[20px] lg:text-[24px] font-normal leading-relaxed mb-8 md:mb-10 max-w-[1005px]">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ligula turpis, pretium sed porta et,
-      pharetra eu velit. Nam ullamcorper ligula ligula, a mattis libero luctus a. Nunc quam libero, finibus sit
-      amet molestie quis, tempor congue quam.
-    </p>
-
-    <div className="bg-white py-6 px-3 md:py-16 md:px-8 rounded-xl shadow-md w-full max-w-[1400px] mx-auto"> {/* Reduced py- from 8 to 6 and px- from 4 to 3 for mobile */}
-      {/*
-        Image Grid: grid-cols-4 for mobile, lg:grid-cols-4 for desktop.
-        Gap: Reduced to gap-1 for mobile (even tighter), sm:gap-8 for desktop.
-      */}
-      <div className="grid grid-cols-4 lg:grid-cols-4 gap-1 sm:gap-8 place-items-center">
-        {/*
-          Individual Images:
-          - w-[60px] h-[60px] for mobile (even smaller).
-          - sm:w-[245px] sm:h-[245px] preserves your original desktop image size.
-        */}
-        <img src="/images/about/1.png" alt="..." className="w-[60px] h-[60px] sm:w-[245px] sm:h-[245px] object-cover rounded-xl" />
-        <img src="/images/about/2.png" alt="..." className="w-[60px] h-[60px] sm:w-[245px] sm:h-[245px] object-cover rounded-xl" />
-        <img src="/images/about/3.png" alt="..." className="w-[60px] h-[60px] sm:w-[245px] sm:h-[245px] object-cover rounded-xl" />
-        <img src="/images/about/4.png" alt="..." className="w-[60px] h-[60px] sm:w-[245px] sm:h-[245px] object-cover rounded-xl" />
+  {/* Hero Section with reduced height and centered content on mobile */}
+  <section className="relative h-[140px] sm:h-[250px] md:h-[300px] flex items-center justify-center mt-6 md:mt-20 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-40">
+    <div className="relative w-full max-w-6xl h-full overflow-hidden rounded-lg shadow-xl">
+      {/* Background Image */}
+      <Image
+        src="images/about/contact.png"
+        alt="Contact background"
+        fill
+        className="object-cover object-center z-0"
+        priority
+      />
+      {/* Content */}
+      <div className="relative z-20 text-white text-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 max-w-[1200px] mx-auto flex flex-col items-center justify-center h-full">
+        <h2 className="text-base sm:text-[28px] md:text-[32px] lg:text-[36px] font-semibold leading-tight mb-2 md:mb-4">
+          Your Dream Home Is Just A Step Away Let
+          <br />
+          Mystic Haven Realty Guide You
+        </h2>
+        <Link
+          href="/contact"
+          className="inline-block px-8 py-2 md:px-16 md:py-3 bg-[#5E2D4F] text-white rounded-[10px] font-bold shadow-md hover:bg-[#4a1f3d] transition-colors text-xs md:text-base"
+        >
+          Contact Us
+        </Link>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+    {/* Explore Projects Section with taller image cards on mobile */}
+    <section className="bg-white py-10 md:py-20 px-4 md:px-8 lg:px-12">
+      <div className="max-w-[1200px] mx-auto text-center px-4 md:px-6 lg:px-8">
+        <h2 className="text-[20px] md:text-[28px] lg:text-[32px] font-semibold text-[#1c1c1c] mb-4">
+          Explore New Off Plan Project
+        </h2>
+        <p className="mx-auto text-black text-[14px] md:text-[20px] lg:text-[24px] font-normal leading-relaxed mb-8 md:mb-10 max-w-[1005px]">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ligula turpis, pretium sed porta et,
+          pharetra eu velit. Nam ullamcorper ligula ligula, a mattis libero luctus a. Nunc quam libero, finibus sit
+          amet molestie quis, tempor congue quam.
+        </p>
+
+    <div className="bg-white py-6 px-4 sm:py-16 sm:px-8 rounded-xl shadow-md w-full max-w-[1400px] mx-auto">
+      <div className="py-2 sm:py-10 px-2 sm:px-6">
+        <div className="grid grid-cols-4 gap-x-2 gap-y-4 sm:gap-8 place-items-center">
+          <img
+            src="/images/about/1.png"
+            alt="..."
+            className="w-[90px] h-[85px] rounded-[4px] sm:w-[245px] sm:h-[245px] sm:rounded-xl object-cover"
+          />
+          <img
+            src="/images/about/2.png"
+            alt="..."
+            className="w-[90px] h-[85px] rounded-[4px] sm:w-[245px] sm:h-[245px] sm:rounded-xl object-cover"
+          />
+          <img
+            src="/images/about/3.png"
+            alt="..."
+            className="w-[90px] h-[85px] rounded-[4px] sm:w-[245px] sm:h-[245px] sm:rounded-xl object-cover"
+          />
+          <img
+            src="/images/about/4.png"
+            alt="..."
+            className="w-[90px] h-[85px] rounded-[4px] sm:w-[245px] sm:h-[245px] sm:rounded-xl object-cover"
+          />
+        </div>
+      </div>
+    </div>
+      </div>
+    </section>
+
       <Footer/>
     </div>
   )

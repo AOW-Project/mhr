@@ -58,101 +58,95 @@ export default function Hero() {
 </section>
 
 {/* Recently Searched Section */}
-
 <section className="bg-black px-4 md:px-20 py-4 md:py-10 font-poppins">
-  <h2 className="text-white text-[15px] md:text-[36px] font-normal mb-6 md:mb-8 mt-10 md:mt-12">
-    Recently Searched
-  </h2>
+  {/* Added top padding above heading */}
+  
+    <h2 className="text-white text-[15px] md:text-[36px] font-normal mb-4 md:mb-8 mt-12 md:mt-14">
+      Recently Searched
+    </h2>
 
-  <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 md:gap-6 mt-0">
+
+  {/* Reduced bottom padding here from pb-2 to pb-1 */}
+  <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 !pb-0 mb-0">
+
     {[...Array(6)].map((_, index) => (
       <div
         key={`recently-searched-${index}`}
-        className="bg-white rounded-[4px] md:rounded-xl w-[153px] h-[223px] md:w-[381px] md:h-[468px] shadow-md overflow-hidden flex flex-col mx-auto"
+        className="bg-white rounded-[4px] md:rounded-xl w-full h-[223px] md:w-[381px] md:h-[468px] shadow-md overflow-hidden flex flex-col"
       >
-          <div className="w-full h-[100px] md:h-[252px] relative">
-            <img
-              src={`/images/property/${(index % 4) + 1}.png`}
-              alt={`Recently Searched Property ${index + 1}`}
-              className="object-cover w-full h-full"
-            />
-          </div>
+        <div className="w-full h-[100px] md:h-[252px] relative">
+          <img
+            src={`/images/property/${(index % 4) + 1}.png`}
+            alt={`Recently Searched Property ${index + 1}`}
+            className="object-cover w-full h-full"
+          />
+        </div>
+
         <div className="p-2 flex flex-col justify-between flex-1 px-3 md:p-4 md:px-8">
-      <div>
-      <p className="text-[12px] text-black mb-0 md:text-[17px] md:mb-1">124 Main Ad</p>
-      <p className="text-[10px] text-black mb-1 md:text-[17px] md:mb-10">New York, New York, NY</p>
+          <div>
+            <p className="text-[12px] text-black mb-0 md:text-[17px] md:mb-1">124 Main Ad</p>
+            <p className="text-[10px] text-black mb-1 md:text-[17px] md:mb-10">New York, New York, NY</p>
 
-      {/* Move this block downward only on mobile */}
-      <div className="flex justify-between px-0 mt-6 md:mt-0 mb-2 md:mb-1">
-        <p className="text-[12px] font-semibold text-black md:text-[17px]">$300000</p>
-        <p className="text-[12px] font-semibold text-black md:text-[17px]">Villa</p>
+            <div className="flex justify-between px-0 mt-6 md:mt-0 mb-2 md:mb-1">
+              <p className="text-[12px] font-semibold text-black md:text-[17px]">$300000</p>
+              <p className="text-[12px] font-semibold text-black md:text-[17px]">Villa</p>
+            </div>
+          </div>
+
+          <button className="bg-[#5E2D4F] text-white text-[10px] font-medium rounded-[94px] mt-1 mb-2 block md:hidden w-[113px] h-[22px] mx-auto">
+            View Details
+          </button>
+
+          <button className="bg-[#5E2D4F] text-white text-[16px] font-medium rounded-[94px] mt-2 hidden md:block w-full h-[47px]">
+            View Details
+          </button>
+        </div>
       </div>
-    </div>
-
-    {/* View Details Button (Mobile only) - less top margin */}
-    <button
-      className="bg-[#5E2D4F] text-white text-[10px] font-medium rounded-[94px] mt-1 md:mt-1  mb-2 mx-auto block md:hidden w-[113px] h-[22px]"
-    >
-      View Details
-    </button>
-
-    {/* View Details Button (Desktop only) - untouched */}
-    <button
-      className="bg-[#5E2D4F] text-white text-[16px] font-medium rounded-[94px] mt-2 mx-auto hidden md:block w-full h-[47px]"
-    >
-      View Details
-    </button>
-  </div>
-    </div>
     ))}
   </div>
 </section>
 
+
 {/* Recommended Section */}
-    <section className="bg-black px-4 md:px-20 py-2 md:py-8 font-poppins">
-      <h2 className="text-white text-[15px] md:text-[36px] font-normal mb-6 md:mb-8">
-        Recommended
-      </h2>
+<section className="bg-black px-4 md:px-20 pt-0 md:pt-0 pb-4 md:pb-6 font-poppins ">
+  <h2 className="text-white text-[15px] md:text-[36px] font-normal mb-4 md:mb-8 mt-0 md:mt-0">
+    Recommended
+  </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 md:gap-6 mb-6">
-        {[...Array(6)].map((_, index) => (
-          <div
-            key={`recommended-${index}`}
-            className="bg-white rounded-[4px] md:rounded-xl w-[153px] h-[223px] md:w-[381px] md:h-[468px] shadow-md overflow-hidden flex flex-col mx-auto"
-          >
-            <div className="w-full h-[100px] md:h-[252px] relative">
-              <img
-                src={`/images/property/${(index % 4) + 1}.png`}
-                alt={`Recommended Property ${index + 1}`}
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <div className="p-2 flex flex-col justify-between flex-1 px-3 md:p-4 md:px-8">
-            <div>
-        <p className="text-[12px] text-black mb-0 md:text-[17px] md:mb-1">124 Main Ad</p>
-        <p className="text-[10px] text-black mb-1 md:text-[17px] md:mb-10">New York, New York, NY</p>
+ <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6  mb-0 pb-6">
 
-        {/* Move this block downward only on mobile */}
-        <div className="flex justify-between px-0 mt-6 md:mt-0 mb-2 md:mb-1">
-          <p className="text-[12px] font-semibold text-black md:text-[17px]">$300000</p>
-          <p className="text-[12px] font-semibold text-black md:text-[17px]">Villa</p>
+    {[...Array(6)].map((_, index) => (
+      <div
+        key={`recently-searched-${index}`}
+        className="bg-white rounded-[4px] md:rounded-xl w-full h-[223px] md:w-[381px] md:h-[468px] shadow-md overflow-hidden flex flex-col"
+      >
+        <div className="w-full h-[100px] md:h-[252px] relative">
+          <img
+            src={`/images/property/${(index % 4) + 1}.png`}
+            alt={`Recently Searched Property ${index + 1}`}
+            className="object-cover w-full h-full"
+          />
         </div>
-      </div>
 
-      {/* View Details Button (Mobile only) - less top margin */}
-      <button
-        className="bg-[#5E2D4F] text-white text-[10px] font-medium rounded-[94px] mt-1 md:mt-1  mb-2 mx-auto block md:hidden w-[113px] h-[22px]"
-      >
-        View Details
-      </button>
+        <div className="p-2 flex flex-col justify-between flex-1 px-3 md:p-4 md:px-8">
+          <div>
+            <p className="text-[12px] text-black mb-0 md:text-[17px] md:mb-1">124 Main Ad</p>
+            <p className="text-[10px] text-black mb-1 md:text-[17px] md:mb-10">New York, New York, NY</p>
 
-      {/* View Details Button (Desktop only) - untouched */}
-      <button
-        className="bg-[#5E2D4F] text-white text-[16px] font-medium rounded-[94px] mt-2 mx-auto hidden md:block w-full h-[47px]"
-      >
-        View Details
-      </button>
-    </div>
+            <div className="flex justify-between px-0 mt-6 md:mt-0 mb-2 md:mb-1">
+              <p className="text-[12px] font-semibold text-black md:text-[17px]">$300000</p>
+              <p className="text-[12px] font-semibold text-black md:text-[17px]">Villa</p>
+            </div>
+          </div>
+
+          <button className="bg-[#5E2D4F] text-white text-[10px] font-medium rounded-[94px] mt-1 mb-2 block md:hidden w-[113px] h-[22px] mx-auto">
+            View Details
+          </button>
+
+          <button className="bg-[#5E2D4F] text-white text-[16px] font-medium rounded-[94px] mt-2 hidden md:block w-full h-[47px]">
+            View Details
+          </button>
+        </div>
       </div>
     ))}
   </div>

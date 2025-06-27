@@ -19,7 +19,7 @@ const Footer = () => {
                Company Info
              </h4>
          <ul className="space-y-0.5 text-gray-200 text-xs md:text-base md:space-y-1">
-           <li>About Mystic Haven Reality</li>
+           <li>About Mystic Haven Realty</li>
            <li>Our Mission</li>
            <li>Trusted Channel Partner</li>
          </ul>
@@ -56,7 +56,7 @@ const Footer = () => {
      </div>
 
      <p className="text-center mt-8 pt-8 text-xs text-gray-300 md:mt-8 md:pt-3 sm:mt-4 sm:pt-2 md:text-sm">
-       © 2025 Mystic Haven Reality. All Rights Reserved.
+       © 2025 Mystic Haven Realty. All Rights Reserved.
      </p>
    </footer>
   )
