@@ -80,10 +80,10 @@ export default function AboutPage() {
 </section>
 
       {/* Partner Cards Section */}
-<section className="bg-black pt-6 pb-10 md:py-10 px-4 md:px-28">
+<section className="bg-black pt-6 pb-12 md:py-10 px-4 md:px-28">
   <div className="max-w-9xl mx-auto">
-    {/* Gap is now universally fixed at 12px for all screen sizes. Removed mx-auto from individual grid items. */}
-    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-[12px] gap-y-[12px] justify-center mt-2">
+    {/* Grid gaps are responsive for this section */}
+    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-[12px] gap-y-[12px] md:gap-x-6 md:gap-y-10 justify-center mt-2">
       {[
         { name: "SOBHA REALTY", logo: "/images/partners/sobha.png" },
         { name: "DAMAC", logo: "/images/partners/damac.png" },
@@ -95,7 +95,7 @@ export default function AboutPage() {
         { name: "DANUBE PROPERTIES", logo: "/images/partners/danube.png" },
         { name: "ARADA", logo: "/images/partners/arada1.png" },
       ].map((partner, idx) => (
-        <div key={idx}> {/* Removed mx-auto from this div */}
+        <div key={idx}>
           {/* Desktop Card (unchanged) */}
           <div
             className="hidden md:block bg-white rounded-lg p-6 text-center space-y-4 border border-gray-300"
@@ -123,16 +123,17 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Mobile Card (scales card only, not gap) */}
+          {/* Mobile Card: Height is fixed (clamped), width increases, content consistently placed */}
           <div
-            className="block md:hidden bg-white rounded-lg border border-gray-300 p-3 text-center flex flex-col justify-between"
+            className="block md:hidden bg-white rounded-lg border border-gray-300 p-4 text-center flex flex-col justify-between" /* p-4 for overall card padding. flex-col & justify-between push content to top/bottom */
             style={{
               width: "clamp(152px, 44vw, 180px)",
-              height: "clamp(226px, 65vw, 270px)",
+              height: "clamp(190px, 55vw, 220px)", /* Mobile card height is fixed (clamped) */
             }}
           >
-            <div>
-              <div className="h-8 flex items-center justify-center mt-2 mb-4">
+            <div className="flex-grow flex flex-col items-center justify-center">
+              {/* Logo container: py-2 for top/bottom padding around the logo. h-8 and flex center the image within this container. */}
+              <div className="py-2 h-8 flex items-center justify-center">
                 <Image
                   src={partner.logo}
                   alt={partner.name}
@@ -141,11 +142,12 @@ export default function AboutPage() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-black text-[11px] text-center leading-tight">
+              <p className="text-black text-[11px] mt-3 text-center leading-tight">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
+            {/* Button block: placed at the bottom due to justify-between on parent, with a small top padding */}
             <div className="pt-2">
               <button
                 className="bg-[#5E2D4F] text-white text-[12px] font-medium rounded-[94px] w-[80%] mx-auto"
@@ -160,8 +162,6 @@ export default function AboutPage() {
     </div>
   </div>
 </section>
-
-
    <Footer />
     </div>
   )

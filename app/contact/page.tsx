@@ -24,24 +24,12 @@ export default function ContactPage() {
                 <Header />
 
                 {/* Hero Text */}
-                {/*
-                    - `pt-4`: Moves the entire text block slightly up on mobile (reduced from pt-10).
-                    - `md:pt-[120px]`: Ensures desktop padding remains unchanged.
-                */}
+                
                 <div className="relative z-10 flex flex-col justify-center items-center text-center px-4 md:px-0 w-full h-full pt-4 md:pt-[120px]">
-                    {/*
-                        - `mb-2`: Adds a small bottom margin (8px) for mobile between the headline and the button.
-                        - `md:mb-6`: Ensures desktop margin remains unchanged.
-                    */}
                     <h1 className="text-[14px] md:text-5xl font-medium mb-2 md:mb-6 text-white max-w-full md:max-w-[871px] leading-tight md:leading-[1]">
                         <span>Where Finding Home Feels like</span>
                         <span className="mt-0 md:mt-4 block">Destiny</span>
                     </h1>
-
-                    {/*
-                        - `mt-2`: Reintroduces a small top margin (8px) for mobile on the button itself.
-                        - `md:mt-2`: Ensures desktop margin remains unchanged (as it was originally mt-2).
-                    */}
                     <button className="w-[105px] h-[26px] mt-2 md:mt-2 text-white rounded-[100px] bg-[#F627B4] text-[11px] md:text-[20px] font-medium transition md:w-[282px] md:h-[50px]">
                         Let's Connect
                     </button>
@@ -50,7 +38,7 @@ export default function ContactPage() {
 
             {/* Contact Page Content from PDF */}
         <section
-            className="w-full h-auto md:h-[940px] mx-auto px-6 md:px-12 relative " // Main section with responsive height and padding
+            className="w-full h-auto md:h-[940px] mx-auto px-6 md:px-12 relative mt-0 pt-0 " // Main section with responsive height and padding
             style={{
                 backgroundImage: "url('/images/contact/contact.png')",
                 backgroundSize: "cover",
@@ -59,7 +47,7 @@ export default function ContactPage() {
             }}
         >
             {/* Horizontal Lines & Heading Wrapper - positioned absolutely, spanning full width of the SECTION */}
-            <div className="absolute top-10 md:top-16 left-0 right-0 z-10">
+            <div className="absolute top-8 md:top-16 left-0 right-0 z-10">
                 <div className="flex items-center justify-center">
                     <img src="/images/contact/left.png" alt="Line Left" className="flex-grow h-[4px]" />
                     {/* H2 Heading: Set to 14px for mobile, desktop unchanged at 36px */}

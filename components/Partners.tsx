@@ -14,101 +14,105 @@ export default function HomePage() {
 
   return (
    <div className="col-span-3 py-10 bg-white rounded-lg shadow-md border border-gray-200 h-full overflow-hidden">
-      {/* Mobile View */}
-<div className="block md:hidden pt-1 pb-1">
-  {/* Mobile-only Stats Card */}
-  <div className="bg-[#5E2D4F] flex flex-row justify-between items-center px-2 py-4 rounded-lg w-full max-w-[330px] mx-auto h-[81px] gap-2 mb-4">
-    <div className="text-center flex-1">
-      <h3 className="text-[11px] font-normal text-white mb-1" style={{ fontFamily: "Poppins, sans-serif" }}>
+
+  {/* Mobile View */}
+  {/* ✅ Responsive Full-width stats section */}
+<div className="block md:hidden w-full px-4">
+  <div className="bg-[#5E2D4F] flex flex-row justify-between items-center px-4 py-3 mb-4 rounded-lg w-full">
+    <div className="text-center">
+      <h3 className="text-[10px] font-normal text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
         Successful Projects
       </h3>
-      <p className="text-[11px] font-bold text-white" style={{ fontFamily: "Poppins, sans-serif" }}>
+      <p className="text-sm font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
         1000+
       </p>
     </div>
-    <div className="text-center flex-1">
-      <h3 className="text-[11px] font-normal text-white mb-1" style={{ fontFamily: "Poppins, sans-serif" }}>
+    <div className="text-center">
+      <h3 className="text-[10px] font-normal text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
         Happy Clients
       </h3>
-      <p className="text-[11px] font-bold text-white" style={{ fontFamily: "Poppins, sans-serif" }}>
+      <p className="text-sm font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
         5000+
       </p>
     </div>
-    <div className="text-center flex-1">
-      <h3 className="text-[11px] font-normal text-white mb-1" style={{ fontFamily: "Poppins, sans-serif" }}>
+    <div className="text-center">
+      <h3 className="text-[10px] font-normal text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
         Properties Sold
       </h3>
-      <p className="text-[11px] font-bold text-white" style={{ fontFamily: "Poppins, sans-serif" }}>
+      <p className="text-sm font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
         10000+
       </p>
     </div>
   </div>
 
-  {/* Mobile-only Title and Description */}
-  <div className="px-4 mb-4 text-center">
-    <h1 className="text-[24px] font-bold text-[#5E2D4F] mb-4" style={{
-      fontWeight: "700",
-      textShadow: "1px 1px 4px #D4B8CC, 0 4px 10px rgba(0, 0, 0, 0.1)",
-      color: "#5E2D4F",
-    }}>
-      Mystic Haven Realty
-    </h1>
-    <p className="text-[14px] font-normal text-black leading-relaxed" style={{ fontFamily: "Poppins, sans-serif" }}>
-      Mystic Haven Realty is a trusted channel partner, helping buyers find apartments, villas, and luxury homes
-      from top developers like Sobha, Akada, Damac, and Nakheel. We make property buying easy, transparent, and
-      hassle-free by offering expert guidance and exclusive access to premium real estate.
-    </p>
+    {/* Title and Description */}
+    <div className="px-4 mb-4 text-center">
+      <h1 className="text-[24px] font-bold text-[#5E2D4F] mb-4" style={{
+        fontWeight: "700",
+        textShadow: "1px 1px 4px #D4B8CC, 0 4px 10px rgba(0, 0, 0, 0.1)",
+        color: "#5E2D4F",
+      }}>
+        Mystic Haven Realty
+      </h1>
+      <p className="text-[14px] font-normal text-black leading-relaxed" style={{ fontFamily: "Poppins, sans-serif" }}>
+        Mystic Haven Realty is a trusted channel partner, helping buyers find apartments, villas, and luxury homes
+        from top developers like Sobha, Akada, Damac, and Nakheel. We make property buying easy, transparent, and
+        hassle-free by offering expert guidance and exclusive access to premium real estate.
+      </p>
+    </div>
+
+    {/* Property Grid */}
+    <section className="px-4 md:px-12 mb-4">
+      <div className="grid grid-cols-2 gap-[12px] w-full mx-auto">
+        <div className="grid gap-[12px]">
+          <div className="overflow-hidden rounded-lg shadow-lg aspect-[158/89] w-full">
+            <img src="/images/partners/1.png" alt="Property 1" className="w-full h-full object-cover" />
+          </div>
+          <div className="overflow-hidden rounded-lg shadow-lg aspect-[158/95] w-full">
+            <img src="/images/partners/2.png" alt="Property 2" className="w-full h-full object-cover" />
+          </div>
+        </div>
+        <div className="grid gap-[12px]">
+          <div className="overflow-hidden rounded-lg shadow-lg aspect-[158/56] w-full">
+            <img src="/images/partners/3.png" alt="Property 3" className="w-full h-full object-cover" />
+          </div>
+          <div className="overflow-hidden rounded-lg shadow-lg aspect-[158/130] w-full">
+            <img src="/images/partners/4.png" alt="Property 4" className="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Our Partners */}
+    <section className="text-center px-4 mt-4 mb-2">
+      <h2 className="text-[20px] font-semibold text-black mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>
+        Our Partners
+      </h2>
+      <img src="/images/partners/Frame 4.png" alt="Partners" className="w-full h-[100px] object-contain" />
+    </section>
+
+    {/* Consultation Form */}
+    <section className="px-4">
+      <div className="w-full bg-white rounded-lg shadow-md border border-gray-200 p-4">
+        <h3 className="text-[18px] font-bold text-black mb-4" style={{ fontFamily: "Poppins, sans-serif" }}>
+          Get Consultation
+        </h3>
+        <form className="space-y-3" onSubmit={handleSubmit}>
+          <input type="text" name="name" placeholder="Name" required className="w-full h-[40px] border border-black rounded-[10px] p-2 text-[13px] placeholder-gray-500" style={{ fontFamily: "Poppins, sans-serif" }} />
+          <input type="email" name="email" placeholder="Email" required className="w-full h-[40px] border border-black rounded-[10px] p-2 text-[13px] placeholder-gray-500" style={{ fontFamily: "Poppins, sans-serif" }} />
+          <input type="tel" name="mobile1" placeholder="Mobile" required className="w-full h-[40px] border border-black rounded-[10px] p-2 text-[13px] placeholder-gray-500" style={{ fontFamily: "Poppins, sans-serif" }} />
+          <input type="tel" name="mobile2" placeholder="Alternate Mobile" required className="w-full h-[40px] border border-black rounded-[10px] p-2 text-[13px] placeholder-gray-500" style={{ fontFamily: "Poppins, sans-serif" }} />
+          <textarea name="message" placeholder="Message" className="w-full h-[80px] border border-black rounded-[10px] p-2 text-[13px] resize-none placeholder-gray-500" style={{ fontFamily: "Poppins, sans-serif" }} />
+          <button type="submit" className="w-full bg-[#5E2D4F] text-white py-2 px-4 rounded-full text-[13px] font-medium hover:bg-[#4A2340] transition-all" style={{ fontFamily: "Poppins, sans-serif" }}>
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+
   </div>
 
-  {/* Mobile Property Grid */}
- <section className="px-4 md:px-12 mb-4"> {/* Responsive padding: 16px for mobile, 48px for desktop+ */}
-    <div className="grid grid-cols-2 gap-[12px] w-full mx-auto"> {/* Removed max-w-[330px] to allow scaling */}
-        <div className="grid gap-[12px]">
-            <div className="overflow-hidden rounded-lg shadow-lg aspect-[158/89] w-full">
-                <img src="/images/partners/1.png" alt="Property 1" className="w-full h-full object-cover" />
-            </div>
-            <div className="overflow-hidden rounded-lg shadow-lg aspect-[158/95] w-full">
-                <img src="/images/partners/2.png" alt="Property 2" className="w-full h-full object-cover" />
-            </div>
-        </div>
-        <div className="grid gap-[12px]">
-            <div className="overflow-hidden rounded-lg shadow-lg aspect-[158/56] w-full">
-                <img src="/images/partners/3.png" alt="Property 3" className="w-full h-full object-cover" />
-            </div>
-            <div className="overflow-hidden rounded-lg shadow-lg aspect-[158/130] w-full">
-                <img src="/images/partners/4.png" alt="Property 4" className="w-full h-full object-cover" />
-            </div>
-        </div>
-    </div>
-</section>
 
-  {/* Mobile Our Partners */}
-  <section className="text-center px-4 mt-4 mb-2">
-    <h2 className="text-[20px] font-semibold text-black mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>
-      Our Partners
-    </h2>
-    <img src="/images/partners/Frame 4.png" alt="Partners" className="w-full h-[100px] object-contain" />
-  </section>
-
-  {/* Mobile Form Section */}
-  <section className="px-4">
-    <div className="w-full bg-white rounded-lg shadow-md border border-gray-200 p-4">
-      <h3 className="text-[18px] font-bold text-black mb-4" style={{ fontFamily: "Poppins, sans-serif" }}>
-        Get Consultation
-      </h3>
-      <form className="space-y-3" onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Name" required className="w-full h-[40px] border border-black rounded-[10px] p-2 text-[13px] placeholder-gray-500" style={{ fontFamily: "Poppins, sans-serif" }} />
-        <input type="email" name="email" placeholder="Email" required className="w-full h-[40px] border border-black rounded-[10px] p-2 text-[13px] placeholder-gray-500" style={{ fontFamily: "Poppins, sans-serif" }} />
-        <input type="tel" name="mobile1" placeholder="Mobile" required className="w-full h-[40px] border border-black rounded-[10px] p-2 text-[13px] placeholder-gray-500" style={{ fontFamily: "Poppins, sans-serif" }} />
-        <input type="tel" name="mobile2" placeholder="Alternate Mobile" required className="w-full h-[40px] border border-black rounded-[10px] p-2 text-[13px] placeholder-gray-500" style={{ fontFamily: "Poppins, sans-serif" }} />
-        <textarea name="message" placeholder="Message" className="w-full h-[80px] border border-black rounded-[10px] p-2 text-[13px] resize-none placeholder-gray-500" style={{ fontFamily: "Poppins, sans-serif" }} />
-        <button type="submit" className="w-full bg-[#5E2D4F] text-white py-2 px-4 rounded-full text-[13px] font-medium hover:bg-[#4A2340] transition-all" style={{ fontFamily: "Poppins, sans-serif" }}>
-          Submit
-        </button>
-      </form>
-    </div>
-  </section>
-</div>
 
 
       {/* Desktop Version Below (Unchanged) */}
