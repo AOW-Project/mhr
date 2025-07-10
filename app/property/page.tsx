@@ -20,7 +20,7 @@ export default function Hero() {
         {/* Hero Content */}
         <div className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4 md:px-0 pt-10 md:pt-4">
           <p className="text-[16px] md:text-[24px] font-normal mb-0.5 md:mb-2">
-            Mystic Heaven Reality
+            Mystic Haven Realty
           </p>
           <h1 className="text-[16px] md:text-[48px] font-normal mb-1 md:mb-6">
             View Properties

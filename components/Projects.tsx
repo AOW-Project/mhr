@@ -106,7 +106,7 @@ export default function Projects() {
 
         {/* Subtitle */}
         <p className="text-[13px] md:text-[20px] text-white text-center font-normal font-poppins mb-10 md:mb-16 px-4">
-          Showcasing The Best Deal Of Mystic Heaven Realty
+          Showcasing The Best Deal Of Mystic Haven Realty
         </p>
 
         {/* Mobile Carousel */}

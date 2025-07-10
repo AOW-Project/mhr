@@ -29,7 +29,7 @@ export default function AboutPage() {
     {/* Hero Text */}
     <div className="relative z-20 text-center flex flex-col items-center w-full px-4 mt-4 md:mt-20">
         {/* Mobile font size changed to 14px, desktop remains 30px */}
-        <p className="text-white text-[14px] md:text-[30px] font-normal mb-0 md:mb-2">Mystic Heaven Reality</p>
+        <p className="text-white text-[14px] md:text-[30px] font-normal mb-0 md:mb-2">Mystic Haven Realty</p>
         {/* Mobile font size changed to 14px, desktop remains 6xl */}
         <h1 className="text-white text-[14px] md:text-6xl font-semibold">Our Partners</h1>
     </div>
@@ -79,7 +79,7 @@ export default function AboutPage() {
     </div>
 </section>
 
-      {/* Partner Cards Section */}
+ {/* Partner Cards Section */}
 <section className="bg-black pt-6 pb-12 md:py-10 px-4 md:px-28">
   <div className="max-w-9xl mx-auto">
     {/* Grid gaps are responsive for this section */}

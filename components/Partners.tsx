@@ -109,14 +109,9 @@ export default function HomePage() {
         </form>
       </div>
     </section>
-
   </div>
 
-
-
-
       {/* Desktop Version Below (Unchanged) */}
-      {/* ... (Keep all your original desktop content here exactly as it was) */}
         <div className="hidden md:block">
       <section className="bg-white text-black py-8">
         <div className="flex flex-col md:flex-row items-center max-w-[1200px] mx-auto gap-6 md:gap-16 min-h-[323px] px-4">
